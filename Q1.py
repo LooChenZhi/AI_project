@@ -53,7 +53,7 @@ def population(count):
 # Calculate the range between money on hand with total
 def fitness(individual):
     # [hotel,food_per_meals,t_spots,one_t_spots,t_fee,t_fre]
-    total = individual[0]*4 + individual[1]*3*duration + individual[2]*individual[3] + individual[4]*individual[5]*duration
+    total = individual[0]*(duration-1) + individual[1]*3*duration + individual[2]*individual[3] + individual[4]*individual[5]*duration
     return abs(money_on_hand - total)
 
 
